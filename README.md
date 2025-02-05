@@ -1,4 +1,3 @@
-```markdown
 # Flight Search Application
 
 A modern flight search application built with React 19, TanStack Query, and Tailwind CSS. This application provides a Google Flights-like experience with real-time flight search capabilities.
