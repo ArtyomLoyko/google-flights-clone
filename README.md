@@ -1,50 +1,139 @@
-# React + TypeScript + Vite
+```markdown
+# Flight Search Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern flight search application built with React 19, TanStack Query, and Tailwind CSS. This application provides a Google Flights-like experience with real-time flight search capabilities.
 
-Currently, two official plugins are available:
+![Flight Search Form](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yHOHf7hjNnPIFcJQMDgCisN8jP4K76.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+### 🔍 Smart Search
+- Real-time airport search with autocomplete
+- Support for multiple airports in the same city
+- Intelligent search suggestions with airport codes and city names
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 🎨 Modern UI/UX
+- Clean, responsive design
+- Beautiful winter-themed hero section
+- Smooth transitions and animations
+- Loading states with skeleton UI
+- Calendar picker for dates
 
-- Configure the top-level `parserOptions` property like this:
+![Search Interface](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pVXmdKeBVv9V98n5aQEi8v8OuE4XX7.png)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### ✈️ Flight Results
+- Comprehensive flight information
+- Multiple airline support
+- Price comparison
+- Duration and stops information
+- Airline logos and branding
+
+![Flight Results](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-rNVxwrnEhSUwGuIfoFcxVPTF6cj1OZ.png)
+
+### 🛠️ Technical Features
+- Built with React 19
+- Real-time data fetching with TanStack Query
+- Type-safe with TypeScript
+- Styled with Tailwind CSS and shadcn/ui
+- Responsive design for all devices
+- Loading states and error handling
+
+![Loading States](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7wFFMYpRqXGkMWZt8Z3dGZq1CRk1er.png)
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18 or higher
+- npm or yarn
+- RapidAPI key for the Sky Scrapper API
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/flight-search-app.git
+cd flight-search-app
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```shellscript
+npm install
 ```
+
+3. Create a `.env` file in the root directory:
+
+
+```plaintext
+VITE_RAPIDAPI_KEY=your_api_key_here
+VITE_RAPIDAPI_HOST=api_host
+```
+
+4. Start the development server:
+
+
+```shellscript
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Building for Production
+
+To create a production build:
+
+```shellscript
+npm run build
+```
+
+The built files will be in the `dist` directory.
+
+## Environment Variables
+
+The following environment variables are required:
+
+- `VITE_RAPIDAPI_KEY`: Your RapidAPI key for accessing the Sky Scrapper API
+- `VITE_RAPIDAPI_HOST`: Host of RapidAPI
+
+
+## Tech Stack
+
+- React 19
+- TypeScript
+- TanStack Query
+- Tailwind CSS
+- shadcn/ui
+- Vite
+- React Router
+- date-fns
+- Lucide React icons
+
+
+## Features in Detail
+
+### Airport Search
+
+- Debounced search to prevent excessive API calls
+- Rich airport information including city and country
+- Support for airport codes and city names
+- Caching of search results for better performance
+
+
+### Flight Search Form
+
+- Round trip/One-way toggle
+- Passenger count selection
+- Cabin class selection
+- Date range picker
+- Airport swap functionality
+- Form validation
+
+
+### Flight Results
+
+- Sort by price, duration, or stops
+- Detailed flight information
+- Airline logos and branding
+- Price comparison
+- Loading states with skeleton UI
