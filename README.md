@@ -1,4 +1,4 @@
-# Flight Search Application
+# [Flight Search Application](https://artyomloyko.github.io/google-flights-clone)
 
 A modern flight search application built with React 19, TanStack Query, and Tailwind CSS. This application provides a Google Flights-like experience with real-time flight search capabilities.
 
