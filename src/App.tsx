@@ -8,7 +8,7 @@ const queryClient = new QueryClient()
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter basename="/google-flights-clone">
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<SearchPage />} />
           <Route path="/search" element={<ResultsPage />} />
