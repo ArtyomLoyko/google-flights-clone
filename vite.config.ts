@@ -4,7 +4,7 @@ import { defineConfig } from "vite"
  
 export default defineConfig({
   plugins: [react()],
-  base: "/google-flights-clone",
+  base: "/google-flights-clone/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
